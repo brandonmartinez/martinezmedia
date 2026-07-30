@@ -24,8 +24,8 @@ browser refreshes.
 
 ## Scripts
 
-| Script          | What it does                                                      |
-| --------------- | ----------------------------------------------------------------- |
+| Script          | What it does                                                       |
+| --------------- | ------------------------------------------------------------------ |
 | `npm run dev`   | Watch CSS + serve `src/` with live reload on port 3000             |
 | `npm run build` | Compile minified CSS, then assemble `_site/` (the deploy artifact) |
 | `npm run css`   | Compile `styles/tailwind.css` to `src/styles.css` once             |
@@ -40,7 +40,7 @@ Everything under `src/` ships; nothing outside it does. The build is a straight 
 src/                           everything that ships
   index.html                   the page
   images/clients/              client logos
-  images/                      favicon, apple touch icon, Open Graph image
+  images/                      brand SVGs, favicon, apple touch icon, Open Graph image
   robots.txt
   sitemap.xml
   styles.css                   GENERATED — never committed

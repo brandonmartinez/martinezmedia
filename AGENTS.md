@@ -14,7 +14,7 @@ adding to it.
   No CMS. No second page. No analytics.
 - The `pre-2026-site` and `initial-site-design` branches hold an unfinished Next.js app.
   **Do not merge, cherry-pick, or revive it.** Its `content/clients/*.md` bodies are lorem
-  ipsum — nothing there is safe to copy as copy. Only the client *names* were ever real.
+  ipsum — nothing there is safe to copy as copy. Only the client _names_ were ever real.
 - No JavaScript is required to render this page. Keep it that way: it must be complete and
   readable with JS disabled.
 
@@ -80,6 +80,29 @@ The client names, dates, and counts on this page come from records Brandon holds
 invent, round, embellish, or "tidy up" a client, a year, or a number. If a number needs to
 change, ask him for the source. The same goes for the client logos: they are the real ones,
 recovered from the old branch, and their `alt` text is the real client name.
+
+## The logo
+
+`src/images/logo-wordmark.svg` and `logo-mark.svg` are the genuine Martinez Media marks,
+exported from Brandon's Illustrator source and trimmed to their ink bounds. They are
+outlines, not text, so they carry the original Vectora LT look without embedding a font.
+The wordmark is inlined directly into the hero `<h1>` — inline, not `<img>`, so the
+headline paints on first render with no request and no flash of an empty hero. Its
+accessible name comes from a visually hidden `<span>`; the `<svg>` itself is
+`aria-hidden`. Keep it that way: exactly one `<h1>`, and it must always have a text name.
+
+The three-colour rule under the wordmark — wine, green, navy at 50% — is the oldest
+surviving piece of the brand. It is reprised once, as the bar across the top of the
+footer (`--color-brand-wine|green|navy`, pre-blended over the paper). Use it sparingly;
+it stops meaning anything if it shows up on every section.
+
+`favicon.png` (512), `apple-touch-icon.png` (180), and `opengraph.png` (1200x630) are
+generated from those SVGs, so regenerate them from the SVGs rather than editing pixels.
+The icons crop to the `mM` monogram: the "martinezMEDIA" sub-line in the square mark goes
+illegible below about 64px.
+
+Do **not** copy the Vectora LT webfonts from the old WordPress theme into this repo.
+Vectora LT is a commercial Linotype face and this repository is public.
 
 ## Working on it
 
